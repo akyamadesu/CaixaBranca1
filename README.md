@@ -19,5 +19,8 @@ Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 4. TODOS OS NULLPOINTERS FORAM TRATADOS?
   Não há tratamento explícito para NullPointerExceptions. Isso significa que, se algum objeto (como conn, st, rs) for nulo em algum momento, isso pode causar uma exceção em tempo de execução. 
   
-A ARQUITETURA UTILIZADA FOI DEVIDAMENTE RESPEITADA?
-AS CONEXÕES UTILIZADAS FORAM FECHADAS?
+5. A ARQUITETURA UTILIZADA FOI DEVIDAMENTE RESPEITADA?
+  Não há uma arquitetura específica mencionada no código, mas parece estar seguindo um fluxo de pprocedimento.
+  
+6. AS CONEXÕES UTILIZADAS FORAM FECHADAS?
+   Não há chamadas para conn.close(), o que pode resultar em vazamentos de conexão. É importante fechar as conexões após o uso para liberar recursos
